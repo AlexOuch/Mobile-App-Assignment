@@ -15,6 +15,8 @@ public class SecondScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second_screen);
 
+        Intent activityThatCalled = getIntent();
+        int console = activityThatCalled.getExtras().getInt("CONSOLE");
         buttonTest = findViewById(R.id.buttonTest);
 
         buttonTest.setOnClickListener(new View.OnClickListener() {

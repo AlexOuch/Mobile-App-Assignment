@@ -21,8 +21,9 @@ public class MainActivity extends AppCompatActivity {
         psScreenButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent psScreenIntent = new Intent(view.getContext(), SecondScreen.class);
-                startActivity(psScreenIntent);
+                Intent secondScreenIntent = new Intent(view.getContext(), SecondScreen.class);
+                secondScreenIntent.putExtra("CONSOLE", 3);
+                startActivity(secondScreenIntent);
             }
         });
     }

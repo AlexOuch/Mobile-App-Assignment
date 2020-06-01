@@ -126,7 +126,7 @@ public class GameDatabaseHelper extends SQLiteOpenHelper {
                 Integer price = cursor.getInt(5);
 
                 game = new Game();
-                game.add(game);
+                //game.add(game);
             }
         }
         cursor.close();

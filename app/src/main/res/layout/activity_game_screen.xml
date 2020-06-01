@@ -24,7 +24,7 @@
         android:layout_height="50dp"
         android:background="#36393F"
         android:gravity="center"
-        android:text="TextView"
+        android:text="GameBase"
         android:textColor="#FFFFFF"
         android:textSize="20dp"
         android:textStyle="bold"

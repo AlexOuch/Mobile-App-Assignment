@@ -1,3 +1,4 @@
+/*
 package com.example.gamebase;
 
 import android.content.ContentValues;
@@ -134,3 +135,4 @@ public class GameDatabaseHelper extends SQLiteOpenHelper {
         return games;
     }
 }
+*/

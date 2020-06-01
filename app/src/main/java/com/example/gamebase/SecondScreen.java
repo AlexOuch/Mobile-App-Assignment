@@ -13,6 +13,7 @@ import android.widget.TextView;
 public class SecondScreen extends AppCompatActivity {
 
     ImageButton homeButton;
+    ImageButton gameButton;
     protected void onCreate(Bundle savedInstanceState) {
 
 
@@ -21,7 +22,9 @@ public class SecondScreen extends AppCompatActivity {
 
         Intent activityThatCalled = getIntent();
         String console = activityThatCalled.getExtras().getString("CONSOLE");
+
         homeButton = findViewById(R.id.homeButton);
+        gameButton = findViewById(R.id.gameImageButton);
 
         TextView title;
         title = findViewById(R.id.titleText);
@@ -45,6 +48,19 @@ public class SecondScreen extends AppCompatActivity {
         if(console.equals("play")){
             title.setText("Google PlayStore");
         }
+
+        gameButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent gameScreenIntent = new Intent(view.getContext(), GameScreen.class);
+
+                finish();
+                startActivity(gameScreenIntent);
+
+                //kill activity
+
+            }
+        });
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

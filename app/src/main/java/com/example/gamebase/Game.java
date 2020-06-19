@@ -1,4 +1,4 @@
-/*
+
 package com.example.gamebase;
 
 import android.content.Context;
@@ -90,4 +90,3 @@ public class Game implements Serializable {
 
 
 }
-*/

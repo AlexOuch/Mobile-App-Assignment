@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
+    GameDatabaseHelper gameDatabaseHelper;
     ImageButton searchButton;
     ImageButton steamScreenButton;
     ImageButton nintendoScreenButton;
@@ -22,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        gameDatabaseHelper = new GameDatabaseHelper(this);
 
         searchButton = findViewById(R.id.searchButton);
         searchButton.setOnClickListener(new View.OnClickListener() {

@@ -1,4 +1,4 @@
-/*
+
 package com.example.gamebase;
 
 import android.content.ContentValues;
@@ -45,7 +45,7 @@ public class GameDatabaseHelper extends SQLiteOpenHelper {
     private static final String DROP_TABLE = "DROP TABLE IF EXISTS " + TABLE_NAME;
     private static final String GET_ALL_ST = "SELECT * FROM " + TABLE_NAME;
 
-    private GameDatabaseHelper(@Nullable Context context) {
+    GameDatabaseHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
@@ -58,7 +58,7 @@ public class GameDatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         sqLiteDatabase.execSQL(DROP_TABLE);
-        onCreate();
+        onCreate(sqLiteDatabase);
     }
 
     public Long insert(String name, String console, String description, Integer price){
@@ -135,4 +135,3 @@ public class GameDatabaseHelper extends SQLiteOpenHelper {
         return games;
     }
 }
-*/
